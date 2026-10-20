@@ -489,3 +489,75 @@ html[data-theme="light"] .h-foot { background: #0b0d11; }
   .h-cta { flex-direction: column; }
   .h-foot-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================== TELEFONY (BankFake) ============================== */
+@media (max-width: 768px) {
+  body { font-size: 15.5px; }
+  .h-wrap { padding: 0 16px; }
+  .h-top nav { height: 62px; gap: 10px; }
+  .h-pillbar { top: 62px; padding: 10px 16px; }
+  .h-pill { padding: 10px 14px; font-size: 15px; }
+  .h-brand { font-size: 16px; gap: 9px; }
+  .h-tools { gap: 8px; }
+
+  .h-hero { padding: 42px 0 36px; }
+  .h-hero-grid { gap: 28px; }
+  .h-kick { font-size: 13px; margin-bottom: 14px; }
+  .h-hero h1 { margin-bottom: 16px; }
+  .h-lead { font-size: 16.5px; margin-bottom: 24px; }
+  .h-cta-meta { font-size: 13.5px; }
+  .h-hero-fig figcaption, .h-frame-fig figcaption { font-size: 13px; margin-top: 10px; }
+
+  .h-num { padding: 24px 22px; }
+  .h-live { padding-top: 44px; }
+  .h-sec { padding: 48px 0; }
+  .h-seo { padding-top: 48px; }
+  .h-head { margin-bottom: 30px; }
+  .h-head p, .h-split p, .seo-lead { font-size: 16px; }
+
+  .bento { gap: 16px; }
+  .b-card { padding: 26px; }
+  .b-big .b-body { padding: 26px 26px 18px; }
+  .b-wide .b-body { padding: 26px; }
+  .b-shot { padding: 0 16px 16px; }
+  .b-wide .b-shot { padding: 0 16px 16px; }
+  .b-card h3 { font-size: 20px; }
+  .b-card p { font-size: 16px; }
+
+  .h-steps { gap: 34px; }
+  .h-steps h3 { margin-top: 14px; font-size: 18px; }
+
+  .h-cards { gap: 16px; }
+  .h-card { padding: 24px; }
+  .seo-feats { gap: 16px; }
+  .seo-feats li { padding: 24px; }
+
+  .slider { padding: 6px 16px 20px; gap: 16px; }
+  .s-item { flex: 0 0 86vw; }
+
+  .h-road-item { padding: 22px 20px; gap: 6px; }
+  .h-road-ver { font-size: 20px; }
+
+  .seo-faq summary { padding: 18px 20px; padding-right: 46px; font-size: 16px; }
+  .seo-faq summary::after { right: 20px; }
+  .seo-faq details > div { padding: 0 20px 18px; font-size: 15.5px; }
+
+  .h-final { padding: 24px 0 64px; }
+  .h-final-box { padding: 30px 22px; gap: 22px; }
+  .h-final-btns { width: 100%; }
+  .h-final-btns .h-btn { flex: 1 1 auto; }
+
+  .h-foot { padding: 48px 0 26px; }
+  .h-foot-top { padding-bottom: 32px; gap: 28px; }
+  .h-foot-bot { margin-top: 22px; flex-direction: column; gap: 6px; }
+}
+@media (max-width: 480px) {
+  .h-tools a.h-ibtn { display: none; }        /* иконка GitHub — есть в подвале */
+  .h-tools .h-btn { padding: 10px 16px; }
+  .h-tools .h-btn span { display: none; }      /* «Скачать» — только значок */
+  .h-tools .h-btn { width: 42px; height: 42px; padding: 0; border-radius: 14px; }
+  .slider { padding-left: 16px; padding-right: 16px; }
+  .s-item { flex: 0 0 88vw; }
+  .h-ibtn { width: 38px; height: 38px; }
+  .h-final-btns .h-btn { width: 100%; flex: none; }
+}
