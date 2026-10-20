@@ -1,5 +1,5 @@
 # BankFake — сайт
 
-Веб-версия игры BankFake. Открой ank.html.
+Информационный сайт (лендинг) игры BankFake: https://rusty-prdc.github.io/BankFakeSite/
 
-Исходный проект: https://github.com/rusty-prdc/BankFake
+Приложение: https://www.rustore.ru/catalog/app/org.xprodc.ivan
