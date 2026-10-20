@@ -1,1 +1,112 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=bank.html"><title>BankFake</title></head><body><script>location.replace("bank.html")</script><a href="bank.html">BankFake</a></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BankFake — симулятор банка с ИИ-ассистентом</title>
+<meta name="description" content="BankFake — игра-симулятор банковской жизни: кошелёк, карты, переводы, зарплата, копилки и ИИ-ассистент на нейросети DeepSeek. Доступно в RuStore.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(1200px 600px at 80% -10%, #14532d55, transparent),
+                radial-gradient(900px 500px at -10% 20%, #0e749055, transparent),
+                #0a0f1a;
+    color: #e5eef8; line-height: 1.6;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { display: flex; align-items: center; gap: 12px; padding: 22px 0; }
+  header img { width: 44px; height: 44px; border-radius: 12px; }
+  header b { font-size: 20px; }
+  .badge { font-size: 12px; color: #93c5a9; }
+  .hero { text-align: center; padding: 56px 0 30px; }
+  .hero h1 { font-size: clamp(30px, 6vw, 52px); line-height: 1.15; }
+  .hero h1 span { color: #34d399; }
+  .hero p { max-width: 640px; margin: 16px auto 26px; color: #a9bccf; font-size: 18px; }
+  .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 26px; border-radius: 14px; font-weight: 700;
+    text-decoration: none; transition: transform .15s, box-shadow .15s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-main { background: linear-gradient(135deg, #22c55e, #10b981); color: #04140b; box-shadow: 0 8px 30px #22c55e44; }
+  .btn-ghost { background: #ffffff10; color: #dbe7f3; border: 1px solid #ffffff22; }
+  .stats { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin: 30px 0 8px; }
+  .pill { background: #ffffff0a; border: 1px solid #ffffff14; padding: 8px 16px; border-radius: 999px; font-size: 14px; color: #bcd0e2; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 42px 0; }
+  .card { background: #ffffff08; border: 1px solid #ffffff12; border-radius: 18px; padding: 22px; }
+  .card .ic { font-size: 26px; }
+  .card h3 { margin: 10px 0 6px; font-size: 17px; }
+  .card p { color: #9fb3c7; font-size: 14.5px; }
+  .shot { text-align: center; margin: 44px 0; }
+  .shot img {
+    width: min(340px, 88%); border-radius: 26px; border: 1px solid #ffffff22;
+    box-shadow: 0 30px 80px #00000088;
+  }
+  .shot .cap { margin-top: 12px; color: #8fa5ba; font-size: 14px; }
+  .faq { margin: 40px 0; }
+  .faq h2 { text-align: center; margin-bottom: 22px; font-size: 28px; }
+  details { background: #ffffff08; border: 1px solid #ffffff12; border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; }
+  details summary { cursor: pointer; font-weight: 600; }
+  details p { margin-top: 10px; color: #9fb3c7; font-size: 15px; }
+  footer { border-top: 1px solid #ffffff12; margin-top: 50px; padding: 26px 0 40px; text-align: center; color: #7d93a8; font-size: 14px; }
+  footer a { color: #34d399; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon.png" alt="BankFake">
+    <div>
+      <b>BankFake</b><div class="badge">симулятор банка для Android</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Банк, где ты <span>главный</span></h1>
+    <p>Кошелёк, карты, переводы, зарплата, копилки — и ИИ-ассистент на нейросети DeepSeek,
+       который отвечает по твоим данным: «сколько я потратил за неделю?»</p>
+    <div class="btns">
+      <a class="btn btn-main" href="https://www.rustore.ru/catalog/app/org.xprodc.ivan" target="_blank" rel="noopener">Скачать в RuStore</a>
+      <a class="btn btn-ghost" href="https://github.com/rusty-prdc/BankFake" target="_blank" rel="noopener">Исходники на GitHub</a>
+    </div>
+    <div class="stats">
+      <span class="pill">4 443 установки</span>
+      <span class="pill">Версия 1.2</span>
+      <span class="pill">≈1,1 МБ</span>
+      <span class="pill">Всего 2 разрешения</span>
+    </div>
+  </section>
+
+  <div class="grid">
+    <div class="card"><div class="ic">💳</div><h3>Кошелёк и карты</h3><p>Карты «Мир», Visa и MasterCard с балансами, пополнением и операциями в одном месте.</p></div>
+    <div class="card"><div class="ic">🤖</div><h3>ИИ-ассистент</h3><p>Нейросеть DeepSeek внутри приложения: спроси про баланс, траты, карты или баллы — ответит по твоей истории.</p></div>
+    <div class="card"><div class="ic">💸</div><h3>Зарплата и лимиты</h3><p>Автоматические начисления, лимиты пополнений и честные правила экономики.</p></div>
+    <div class="card"><div class="ic">🪙</div><h3>Баллы и копилки</h3><p>Копи баллы за операции, откладывай в копилки и следи за целями.</p></div>
+    <div class="card"><div class="ic">📊</div><h3>Статистика</h3><p>Графики расходов и доходов за период — видно, куда уходят виртуальные деньги.</p></div>
+    <div class="card"><div class="ic">📱</div><h3>Виджет на экране</h3><p>Баланс всегда перед глазами: удобный виджет прямо на рабочем экране телефона.</p></div>
+    <div class="card"><div class="ic">🎨</div><h3>Тёмная и светлая тема</h3><p>Комфортный интерфейс в любое время суток.</p></div>
+    <div class="card"><div class="ic">🔒</div><h3>Минимум разрешений</h3><p>Только интернет и уведомления. Никакого доступа к файлам, контактам и звонкам.</p></div>
+  </div>
+
+  <section class="shot">
+    <img src="screenshots/widget.jpg" alt="Виджет BankFake">
+    <div class="cap">Виджет BankFake: баланс в рублях, долларах и евро на главном экране</div>
+  </section>
+
+  <section class="faq">
+    <h2>Частые вопросы</h2>
+    <details open><summary>Это настоящий банк?</summary><p>Нет. BankFake — игра-симулятор. Деньги здесь виртуальные, их нельзя вывести или оплатить реальные покупки.</p></details>
+    <details><summary>Как работает ИИ-ассистент?</summary><p>Приложение отправляет твои вопросы на защищённый сервер, а нейросеть DeepSeek отвечает по данным твоего профиля: баланс, карты, история операций, баллы и лимиты.</p></details>
+    <details><summary>Что с моими данными?</summary><p>Всё хранится на твоём устройстве. Приложение запрашивает только интернет и уведомления — больше ничего.</p></details>
+    <details><summary>Где скачать?</summary><p>В RuStore — по кнопке выше. Версия 1.2, весит около 1 МБ.</p></details>
+  </section>
+
+  <footer>
+    BankFake — виртуальный банк-симулятор. Не является финансовой организацией.<br>
+    <a href="https://www.rustore.ru/catalog/app/org.xprodc.ivan" target="_blank" rel="noopener">RuStore</a> ·
+    <a href="https://github.com/rusty-prdc/BankFake" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
