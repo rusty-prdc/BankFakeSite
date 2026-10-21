@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="halloween.css">
 <style>
   .f-xprodc {
     margin-top: 30px;
@@ -88,6 +89,37 @@
 <!-- ============================== HERO ============================== -->
 <section class="h-hero" id="top">
   <div class="h-hero-glow" aria-hidden="true"></div>
+  <div class="hw-deco" aria-hidden="true">
+    <svg class="hw-web" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <path d="M0 0 L110 0 M0 0 L101.6 42.1 M0 0 L77.8 77.8 M0 0 L42.1 101.6 M0 0 L0 110"/>
+      <path d="M40 0 Q42.5 17.6 28.3 28.3 Q17.6 42.5 0 40"/>
+      <path d="M75 0 Q79.7 33.1 53 53 Q33.1 79.7 0 75"/>
+      <path d="M110 0 Q116.7 48.5 77.8 77.8 Q48.5 116.7 0 110"/>
+    </svg>
+    <div class="hw-bats">
+      <svg class="hw-bat b1" viewBox="0 0 64 30"><path d="M32 4l-3 5c-5-4-11-6-18-5l4 4c-4 0-8 2-10 6 4-2 8-1 10 2-3 1-6 4-6 9 4-4 9-5 13-3 1 3 4 6 8 7l-3 3 3 1 2-2 2 2 3-1-2-2c4-1 7-4 8-7 4 2 7-1 11 5-1-5-4-8-8-9 2-3 5-4 10-2-2-4-6-6-10-6l4-4c-7-1-13 1-18 5z"/></svg>
+      <svg class="hw-bat b2" viewBox="0 0 64 30"><path d="M32 4l-3 5c-5-4-11-6-18-5l4 4c-4 0-8 2-10 6 4-2 8-1 10 2-3 1-6 4-6 9 4-4 9-5 13-3 1 3 4 6 8 7l-3 3 3 1 2-2 2 2 3-1-2-2c4-1 7-4 8-7 4 2 7-1 11 5-1-5-4-8-8-9 2-3 5-4 10-2-2-4-6-6-10-6l4-4c-7-1-13 1-18 5z"/></svg>
+      <svg class="hw-bat b3" viewBox="0 0 64 30"><path d="M32 4l-3 5c-5-4-11-6-18-5l4 4c-4 0-8 2-10 6 4-2 8-1 10 2-3 1-6 4-6 9 4-4 9-5 13-3 1 3 4 6 8 7l-3 3 3 1 2-2 2 2 3-1-2-2c4-1 7-4 8-7 4 2 7-1 11 5-1-5-4-8-8-9 2-3 5-4 10-2-2-4-6-6-10-6l4-4c-7-1-13 1-18 5z"/></svg>
+    </div>
+    <svg class="hw-pumpkin-hero" viewBox="0 0 140 130">
+      <defs>
+        <radialGradient id="hwPump" cx="50%" cy="42%" r="68%">
+          <stop offset="0%" stop-color="#ffa04d"/>
+          <stop offset="62%" stop-color="#ff7a1a"/>
+          <stop offset="100%" stop-color="#e8590c"/>
+        </radialGradient>
+      </defs>
+      <path d="M70 32c0-9 5-17 14-21-3 5 0 12 5 14 6 2 9 8 8 15-4-7-11-11-18-10l-4 2z" fill="#15803d"/>
+      <ellipse cx="70" cy="80" rx="58" ry="46" fill="url(#hwPump)"/>
+      <ellipse cx="42" cy="80" rx="29" ry="45" fill="#f97316" opacity=".5"/>
+      <ellipse cx="98" cy="80" rx="29" ry="45" fill="#f97316" opacity=".5"/>
+      <g class="hw-face" fill="#ffd43b">
+        <path d="M44 62l15 19H29z"/>
+        <path d="M96 62l15 19H81z"/>
+        <path d="M40 94c10 13 50 13 60 0-3 15-16 24-30 24s-27-9-30-24z"/>
+      </g>
+    </svg>
+  </div>
   <div class="h-wrap h-hero-grid">
     <div class="h-hero-text reveal">
       <p class="h-kick">Бесплатно · RuStore · Всего 2 разрешения</p>
@@ -105,6 +137,7 @@
       <p class="h-cta-meta">Версия 1.2 · ≈1,1 МБ · 4 443 установки в <a href="https://www.rustore.ru/catalog/app/org.xprodc.ivan" target="_blank" rel="noopener">RuStore</a></p>
     </div>
     <figure class="h-hero-fig reveal">
+      <span class="hw-sticker" aria-hidden="true">🎃 С Хэллоуином!</span>
       <div class="h-stage">
         <img src="assets/screenshots/promo-ui.jpg" width="1080" height="1920" style="max-width:420px" alt="Главный экран BankFake: баланс, кошелёк с картой, баллы и история" fetchpriority="high">
       </div>
@@ -136,6 +169,12 @@
 
     <div class="bento">
       <article class="b-card b-big reveal">
+        <svg class="hw-ghost" aria-hidden="true" viewBox="0 0 56 66">
+          <path d="M28 3C16 3 5 14 5 28v32l7-6 7 6 7-6 7 6 7-6 7 6V28C47 14 40 3 28 3z" fill="rgba(255,255,255,.94)" stroke="rgba(123,44,191,.3)" stroke-width="2"/>
+          <ellipse cx="21" cy="27" rx="4" ry="5.4" fill="#3b0764"/>
+          <ellipse cx="36" cy="27" rx="4" ry="5.4" fill="#3b0764"/>
+          <ellipse cx="28.5" cy="40" rx="4.6" ry="5.8" fill="#3b0764"/>
+        </svg>
         <div class="b-body">
           <h3>ИИ-ассистент, который знает твои цифры</h3>
           <p>Спрашивай обычным текстом: «сколько у меня денег», «что было за неделю», «когда зарплата».
@@ -514,7 +553,7 @@
       <span>© 2026 BankFake · игра-симулятор, виртуальные деньги</span>
       <span>Не является финансовой организацией · не связан с RuStore</span>
     </div>
-    <div class="f-xprodc">by XPRODC</div>
+    <div class="f-xprodc"><i class="hw-fp" aria-hidden="true">🎃</i>by XPRODC<i class="hw-fp hw-fp2" aria-hidden="true">🎃</i></div>
   </div>
 </footer>
 
