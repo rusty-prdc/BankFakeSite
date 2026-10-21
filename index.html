@@ -33,6 +33,37 @@
   @media (max-width: 768px) {
     .f-xprodc { font-size: clamp(24px, 7.5vw, 44px); letter-spacing: .1em; margin-top: 22px; }
   }
+
+  /* ============================== ОТЗЫВЫ RUSTORE ============================== */
+  .rv-card { display: flex; flex-direction: column; }
+  .rv-quote { position: relative; margin: 0 0 18px; font-size: 16.5px; line-height: 1.5; color: var(--text-2); }
+  .rv-quote::before {
+    content: "\201C";
+    display: block;
+    font-family: Unbounded, sans-serif;
+    font-size: 44px;
+    line-height: .55;
+    margin-bottom: 10px;
+    color: var(--accent-text);
+  }
+  .rv-meta { display: flex; align-items: center; gap: 11px; margin-top: auto; }
+  .rv-ava {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent-text);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 16px; flex-shrink: 0;
+  }
+  .rv-meta b { display: block; font-size: 14.5px; }
+  .rv-meta small { color: var(--mute); font-size: 12.5px; }
+  .rv-dev {
+    margin: 0 0 16px; padding: 11px 14px;
+    background: var(--accent-soft); border-radius: 16px;
+    font-size: 13.5px; line-height: 1.45; color: var(--text-2);
+  }
+  .rv-dev b { color: var(--accent-text); }
+  .rv-cta .rv-quote::before { display: none; }
+  .rv-cta .rv-quote { font-size: 21px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .h-card .rv-ctap { margin: 0 0 18px; color: var(--text-2); font-size: 15.5px; }
 </style>
 <script>
 (function () {
@@ -64,6 +95,7 @@
       <a class="h-pill" href="#why">Почему</a>
       <a class="h-pill" href="#start">Как это работает</a>
       <a class="h-pill" href="#shots">Скриншоты</a>
+      <a class="h-pill" href="#reviews">Отзывы</a>
       <a class="h-pill" href="#roadmap">Планы</a>
       <a class="h-pill" href="#faq">Вопросы</a>
     </div>
@@ -377,6 +409,45 @@
       <article class="h-card reveal"><h3>Профиль</h3><p>Своё имя и аватар: приложение знает, к кому обращается.</p></article>
       <article class="h-card reveal"><h3>Тёмная и светлая тема</h3><p>Оформление на выбор — комфортно в любое время суток.</p></article>
       <article class="h-card reveal"><h3>Только 2 разрешения</h3><p>Интернет и уведомления. Ни файлов, ни контактов, ни звонков, ни геолокации.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ОТЗЫВЫ ============================== -->
+<section class="h-sec" id="reviews">
+  <div class="h-wrap">
+    <div class="h-head reveal">
+      <span class="h-kick-2">Отзывы</span>
+      <h2>Что пишут в RuStore</h2>
+      <p>Реальные отзывы игроков: 15 оценок и 8 отзывов в карточке приложения.</p>
+    </div>
+    <div class="h-cards">
+      <article class="h-card rv-card reveal">
+        <div class="rv-quote">Прекрасное приложение 1 в 1 как настоящий банк. Ставлю 5 звезд.</div>
+        <div class="rv-meta"><span class="rv-ava">А</span><div><b>Александр</b><small>RuStore · 23 янв 2026 · нравится 3</small></div></div>
+      </article>
+      <article class="h-card rv-card reveal">
+        <div class="rv-quote">Всё работает.</div>
+        <div class="rv-meta"><span class="rv-ava">М</span><div><b>Макар</b><small>RuStore · 26 янв 2026 · нравится 2</small></div></div>
+      </article>
+      <article class="h-card rv-card reveal">
+        <div class="rv-quote">Приложение прекрасно… сделайте переводы другим пользователям, регистрацию как в настоящем банке, обновите интерфейс и магазин за баллы — прошу вас посмотреть все мои предложения.</div>
+        <div class="rv-meta"><span class="rv-ava">Е</span><div><b>Егор</b><small>RuStore · 15 авг 2026</small></div></div>
+      </article>
+      <article class="h-card rv-card reveal">
+        <div class="rv-quote">Хорошо приложение.</div>
+        <div class="rv-meta"><span class="rv-ava">Т</span><div><b>Тоня</b><small>RuStore · 28 июл 2026</small></div></div>
+      </article>
+      <article class="h-card rv-card reveal">
+        <div class="rv-quote">Можно пж без интернета.</div>
+        <div class="rv-dev"><b>Разработчик:</b> мы стараемся сделать приложение без интернета, всё публикуем в Telegram-канале.</div>
+        <div class="rv-meta"><span class="rv-ava">В</span><div><b>Ваня</b><small>RuStore · 17 июл 2026 · ответ 4 сен 2026</small></div></div>
+      </article>
+      <article class="h-card rv-card rv-cta reveal">
+        <div class="rv-quote">⭐ 3,5 ★ — 15 оценок в RuStore</div>
+        <p class="rv-ctap">После обновления поставь свою оценку или напиши отзыв — это помогает игре расти.</p>
+        <a class="h-btn pri" href="https://www.rustore.ru/catalog/app/org.xprodc.ivan" target="_blank" rel="noopener">Все отзывы в RuStore</a>
+      </article>
     </div>
   </div>
 </section>
