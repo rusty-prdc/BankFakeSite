@@ -30,7 +30,7 @@
   .bat { position: absolute; fill: #17131f; opacity: .9; }
   .bat.b1 { width: 74px; top: 64px; right: 405px; animation: fl 7s ease-in-out infinite; }
   .bat.b2 { width: 52px; top: 132px; right: 330px; opacity: .75; animation: fl 9s ease-in-out infinite reverse; }
-  .pump-emoji { position: absolute; right: 46px; top: 40px; font-size: 64px; filter: drop-shadow(0 10px 24px rgba(249,115,22,.45)); transform: rotate(8deg); }
+  .pump-svg { position: absolute; right: 44px; top: 36px; width: 80px; transform: rotate(8deg); filter: drop-shadow(0 10px 24px rgba(249,115,22,.45)); animation: fl 8s ease-in-out infinite; }
   @keyframes fl { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-14px) rotate(5deg); } }
 
   .inner { position: relative; z-index: 2; height: 100%; padding: 54px 64px; display: flex; flex-direction: column; }
@@ -79,6 +79,9 @@
 
   .chips { display: flex; flex-wrap: wrap; gap: 10px; max-width: 600px; }
   .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 15.5px;
     font-weight: 700;
     padding: 9px 16px;
@@ -88,7 +91,9 @@
     color: #e7e9ee;
     white-space: nowrap;
   }
+  .chip svg { width: 17px; height: 17px; flex-shrink: 0; stroke: #ff8c42; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
   .chip.hot { border-color: rgba(249, 115, 22, .7); background: rgba(249, 115, 22, .16); color: #ffb26b; }
+  .chip.hot svg { stroke: #ffb26b; }
 
   /* телефон */
   .shot {
@@ -104,28 +109,12 @@
     flex-shrink: 0;
   }
   .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .sticker {
-    position: absolute;
-    left: -26px;
-    bottom: 54px;
-    transform: rotate(-7deg);
-    background: linear-gradient(135deg, #f97316, #ffb703);
-    color: #3b1000;
-    font-weight: 800;
-    font-size: 16px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    box-shadow: 0 10px 26px rgba(249, 115, 22, .45);
-    z-index: 3;
-  }
 
   /* подвал */
-  .foot { display: flex; align-items: center; gap: 20px; border-top: 1px solid rgba(255, 255, 255, .12); padding-top: 22px; }
-  .devlabel { font-size: 13px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #8b90a0; }
-  .xlogo { display: flex; align-items: center; gap: 14px; }
+  .foot { display: flex; align-items: center; justify-content: center; gap: 16px; border-top: 1px solid rgba(255, 255, 255, .12); padding-top: 22px; }
+  .devlabel { font-size: 17px; font-weight: 700; color: #8b90a0; letter-spacing: .1em; }
+  .xlogo { display: flex; align-items: center; }
   .xlogo svg { display: block; }
-  .url { margin-left: auto; font-size: 17px; font-weight: 700; color: #c7cbd6; letter-spacing: .02em; }
-  .url b { color: #ff8c42; }
 </style>
 </head>
 <body>
@@ -138,7 +127,24 @@
   </svg>
   <svg class="bat b1" viewBox="0 0 64 30"><path d="M32 4l-3 5c-5-4-11-6-18-5l4 4c-4 0-8 2-10 6 4-2 8-1 10 2-3 1-6 4-6 9 4-4 9-5 13-3 1 3 4 6 8 7l-3 3 3 1 2-2 2 2 3-1-2-2c4-1 7-4 8-7 4 2 7-1 11 5-1-5-4-8-8-9 2-3 5-4 10-2-2-4-6-6-10-6l4-4c-7-1-13 1-18 5z"/></svg>
   <svg class="bat b2" viewBox="0 0 64 30"><path d="M32 4l-3 5c-5-4-11-6-18-5l4 4c-4 0-8 2-10 6 4-2 8-1 10 2-3 1-6 4-6 9 4-4 9-5 13-3 1 3 4 6 8 7l-3 3 3 1 2-2 2 2 3-1-2-2c4-1 7-4 8-7 4 2 7-1 11 5-1-5-4-8-8-9 2-3 5-4 10-2-2-4-6-6-10-6l4-4c-7-1-13 1-18 5z"/></svg>
-  <div class="pump-emoji">🎃</div>
+  <svg class="pump-svg" viewBox="0 0 140 130" aria-hidden="true">
+    <defs>
+      <radialGradient id="pmpG" cx="50%" cy="42%" r="68%">
+        <stop offset="0%" stop-color="#ffa04d"/>
+        <stop offset="62%" stop-color="#ff7a1a"/>
+        <stop offset="100%" stop-color="#e8590c"/>
+      </radialGradient>
+    </defs>
+    <path d="M70 32c0-9 5-17 14-21-3 5 0 12 5 14 6 2 9 8 8 15-4-7-11-11-18-10l-4 2z" fill="#15803d"/>
+    <ellipse cx="70" cy="80" rx="58" ry="46" fill="url(#pmpG)"/>
+    <ellipse cx="42" cy="80" rx="29" ry="45" fill="#f97316" opacity=".5"/>
+    <ellipse cx="98" cy="80" rx="29" ry="45" fill="#f97316" opacity=".5"/>
+    <g fill="#ffd43b">
+      <path d="M44 62l15 19H29z"/>
+      <path d="M96 62l15 19H81z"/>
+      <path d="M40 94c10 13 50 13 60 0-3 15-16 24-30 24s-27-9-30-24z"/>
+    </g>
+  </svg>
 
   <div class="inner">
     <div class="brandrow">
@@ -153,30 +159,29 @@
         <div class="bignum">2.2</div>
         <div class="subtitle">Вклады, копилки, акции и курсы валют, кредит и ипотека, <em>ИИ-отчёты по тратам</em> и виджеты</div>
         <div class="chips">
-          <span class="chip">🏦 Вклады</span>
-          <span class="chip">🐷 Копилки</span>
-          <span class="chip">📈 Акции</span>
-          <span class="chip">💱 Валюта ЦБ</span>
-          <span class="chip">🏠 Кредит и ипотека</span>
-          <span class="chip">🤖 ИИ-отчёты</span>
-          <span class="chip">🧾 CSV и чеки</span>
-          <span class="chip">🔒 PIN-код</span>
-          <span class="chip">📊 Виджеты</span>
-          <span class="chip">💳 BF-Pay</span>
-          <span class="chip hot">🎃 Хэллоуин</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M6 10v8M10 10v8M14 10v8M18 10v8"/><path d="M4 21h16"/></svg>Вклады</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Копилки</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>Акции</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="5"/><circle cx="15" cy="15" r="5"/></svg>Валюта ЦБ</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/></svg>Кредит и ипотека</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="10" rx="3"/><circle cx="9.5" cy="13" r="1.2"/><circle cx="14.5" cy="13" r="1.2"/><path d="M12 5v3"/><circle cx="12" cy="4.5" r="1"/></svg>ИИ-отчёты</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 12h5M9.5 16h5"/></svg>CSV и чеки</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>PIN-код</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Виджеты</span>
+          <span class="chip"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M3 10h18"/></svg>BF-Pay</span>
+          <span class="chip hot"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="14.5" rx="8" ry="6.5"/><path d="M12 8V5"/><path d="M12 5c1.2-1.8 3.4-2.2 5-1.2"/></svg>Хэллоуин</span>
         </div>
       </div>
 
       <div class="shot">
         <img src="../assets/screenshots/promo-ui.jpg" alt="BankFake 2.2">
-        <span class="sticker">🎃 С Хэллоуином!</span>
       </div>
     </div>
 
     <div class="foot">
+      <span class="devlabel">By</span>
       <div class="xlogo">
-        <span class="devlabel">Разработчик</span>
-        <svg width="236" height="52" viewBox="0 0 236 52" xmlns="http://www.w3.org/2000/svg">
+        <svg width="212" height="52" viewBox="0 0 212 52" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="xText" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0%" stop-color="#1668f0"/>
@@ -184,17 +189,13 @@
               <stop offset="100%" stop-color="#a02ce0"/>
             </linearGradient>
           </defs>
-          <circle cx="26" cy="26" r="25" fill="#1565d8"/>
-          <path d="M13 12 h9 l4.5 8.5 L31 12 h9 L25.5 26 41 40 h-9 l-4.5-8.5 L22 40 h-9 l15.5-14z" fill="#ffffff"/>
-          <text x="62" y="37" font-family="Unbounded, sans-serif" font-weight="800" font-size="34" letter-spacing="1" fill="url(#xText)">XPRODC</text>
+          <text x="2" y="37" font-family="Unbounded, sans-serif" font-weight="800" font-size="34" letter-spacing="1" fill="url(#xText)">XPRODC</text>
         </svg>
       </div>
-      <div class="url"><b>rusty-prdc.github.io</b>/BankFakeSite/2.2/</div>
     </div>
   </div>
 </div>
 <script>
-  // подгонка под ширину окна (для скриншота)
   function fit() {
     var p = document.getElementById('poster');
     var s = Math.min(window.innerWidth / 1200, window.innerHeight / 675, 1);
